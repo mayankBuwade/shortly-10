@@ -10,7 +10,7 @@ const Nav = styled.nav`
   padding-right: 5vw;
   background-color: #fff;
 
-  @media only screen and (max-width: 480px) {
+  @media only screen and (max-width: 554px) {
     display: flex;
     justify-content: space-between;
     padding-left: 2vw;
@@ -20,14 +20,14 @@ const Nav = styled.nav`
 
 const Div = styled.div`
   color: ${(props) => props.color};
-  @media only screen and (max-width: 375px) {
+  @media only screen and (max-width: 554px) {
     display: none;
   }
 `;
 
 const Link = styled.a`
   margin: 1vw;
-  font-size: 10px;
+  font-size: 1em;
   font-weight: bold;
   color: ${(props) => props.color};
   &:hover {
@@ -65,7 +65,7 @@ const Wrapper = styled.div`
     }
   }
 
-  @media only screen and (min-width: 375px) {
+  @media only screen and (min-width: 554px) {
     display: none;
   }
 `;

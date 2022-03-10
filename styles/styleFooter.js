@@ -26,12 +26,12 @@ const Nav = styled.nav`
     flex-grow: inherit;
     
     h3 {
-        font-size: 10px;
+        font-size: 1em;
     }
     
     a {
         color: ${theme.colors.gray};
-        font-size: 10px;
+        font-size: 1em;
         padding-top: 5px;
         padding-bottom: 5px;
         &:hover {

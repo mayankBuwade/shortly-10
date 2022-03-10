@@ -5,18 +5,21 @@ function LinkShortner({ handleOnSubmitSearch }) {
   const [query, setQuery] = useState("");
 
   const onSubmit = (e) => {
-      e.preventDefault();
+    e.preventDefault();
+    if (!query) {
+      alert("Empty link address");
+    } else {
       handleOnSubmitSearch(query);
+    }
   };
 
-
   return (
-    <Div>
+    <Div> 
       <Form onSubmit={onSubmit}>
         <Input
           type="text"
           name="name"
-          onChange={(e) => (setQuery(e.target.value))}
+          onChange={(e) => setQuery(e.target.value)}
           value={query}
           placeholder="Shorten a link here"
         />

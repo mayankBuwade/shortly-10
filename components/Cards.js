@@ -18,6 +18,8 @@ const Div = styled.div `
     justify-content: center;
     flex-direction: row;
     justify-content: space-around;
+    margin-bottom: 10vh;
+    margin-top: 2vh;
     @media only screen and (max-width: 720px) {
         flex-direction: column;
         align-items: center;

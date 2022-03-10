@@ -27,10 +27,12 @@ const Div = styled.div`
   p {
     text-align: center;
     color: ${theme.colors.gray};
+    font-size: 2em;
   }
 
   h1{
       text-align: center;
+      font-size: 2em;
   }
 
   @media only screen and (max-width: 480px) {
@@ -38,13 +40,7 @@ const Div = styled.div`
     margin-top: 2rem;
     margin-bottom: 4rem;
 
-    h1 {
-        font-size: 6vw;
-    }
-
-    p{
-        font-size: 2vh;
-    }
+    
     
   }
 `;

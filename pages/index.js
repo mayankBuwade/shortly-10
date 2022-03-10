@@ -24,12 +24,19 @@ function Home() {
   };
 
   useEffect( async () => {
-    const response = fetch(newQuery, { method: "post" });
-    console.log(result);
-    const { result } = await response.json();
-    const data = await result.short_link;
-    console.log(data);
-    setShortLink(data);
+    // const response = fetch(newQuery, { method: "post" });
+    // console.log(result);
+    // const { result } = await response.json();
+    // const data = await result.short_link;
+    // console.log(data);
+    // setShortLink(data);
+    fetch(newQuery, { method: "post" })
+      .then((res) => res.json())
+      .then(({result}) => {
+        setShortLink(result.short_link);
+        console.log(result);
+      })
+
   }, [query] )
 
   return (

@@ -20,19 +20,22 @@ function Card() {
 export default Card;
 
 const Div = styled.div`
-  width: 15rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  margin-left: 2rem;
-  margin-right: 2rem;
-  margin-top: 2rem;
+  width: 18rem;
+  height: auto;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  margin-left: 2vw;
+  margin-right: 2vw;
+  margin-top: 2vw;
   margin-bottom: 5rem;
   background-color: #fff;
   h1 {
-    font-size: 1.5vw;
+    font-size: 1.em;
   }
   p {
-    font-size: 1.5vw;
+    font-size: 1.5em;
     color: ${theme.colors.gray};
   }
   div {
