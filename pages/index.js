@@ -26,8 +26,8 @@ function Home() {
   useEffect( () => {
     const response = fetch(newQuery, { method: "post" });
     console.log(result);
-    const { result } = await response.json();
-    const data = await result.short_link;
+    const { result } =  response.json();
+    const data = result.short_link;
     console.log(data);
     setShortLink(data);
   }, [query] )
