@@ -16,11 +16,7 @@ function ShortLinks({ query, shortLink }) {
         onClick={() => {
           setButtonStatus("Copied");
           setLastShortLink(shortLink);
-          //navigator.clipboard.writeText(shortLink);
-        var copyText = shortLink;
-        copyText.select();
-        copyText.setSelectionRange(0, 99999);
-        navigator.clipboard.writeText(copyText.value);
+          navigator.clipboard.writeText(shortLink);
         }}
         buttonText={buttonStatus}
       >
