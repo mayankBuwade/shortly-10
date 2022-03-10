@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import useSWR from "swr";
 import Cards from "../components/Cards";
 import Details from "../components/Details";
@@ -15,13 +15,22 @@ function Home() {
   const handleOnSubmitSearch = async (query) => {
     setQuery(query);
     setNewQuery(`https://api.shrtco.de/v2/shorten?url=${query}`);
-    const response = await fetch(newQuery, { method: "post" });
+    // const response = await fetch(newQuery, { method: "post" });
+    // console.log(result);
+    // const { result } = await response.json();
+    // const data = await result.short_link;
+    // console.log(data);
+    // setShortLink(data);
+  };
+
+  useEffect( () => {
+    const response = fetch(newQuery, { method: "post" });
     console.log(result);
     const { result } = await response.json();
     const data = await result.short_link;
     console.log(data);
     setShortLink(data);
-  };
+  }, [query] )
 
   return (
     <>
