@@ -20,7 +20,7 @@ function ShortLinks({ query, shortLink }) {
         var copyText = shortLink;
         copyText.select();
         copyText.setSelectionRange(0, 99999);
-        navigator.clipboard.writeText(shortLink);
+        navigator.clipboard.writeText(copyText.value);
         }}
         buttonText={buttonStatus}
       >
